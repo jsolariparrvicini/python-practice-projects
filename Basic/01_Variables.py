@@ -22,9 +22,12 @@ print(type(my_int_to_str_variable))
 #Función len() me da la cantidad de caracteres de una cadena de texto
 print(len(my_string_variable))
 
-#Función input() le pide al usuario que ingrese un valor por consola
-user_name = input("What's your name? ")
-print(f"User name is {user_name}") 
+#Función list() convierte cada caracter de la cadena en un elemento de la lista
+print(list(name))
 
-user_age = int(input("What's your age?")) # OJO! input() devuelve un string.
-print(user_age)
+#Función input() le pide al usuario que ingrese un valor por consola
+# user_name = input("What's your name? ")
+# print(f"User name is {user_name}") 
+
+# user_age = int(input("What's your age?")) # OJO! input() devuelve un string.
+# print(user_age)
