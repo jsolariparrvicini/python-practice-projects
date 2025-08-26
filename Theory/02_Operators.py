@@ -37,3 +37,9 @@ print("hola" and 1) # 1 porque es el que hace cumplir la condición
 
 print(str(bool(1)))
 
+#:.2f es una forma de formatear números en Python usando f-strings.
+# : → empieza el formato.
+# .2 → significa 2 decimales.
+# f → significa que se muestre como número decimal de punto fijo (float).
+
+print(f"El resultado es {3.14159:.2f}") #El resultado es 3.14
