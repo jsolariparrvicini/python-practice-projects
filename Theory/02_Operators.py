@@ -31,9 +31,10 @@ print(3 > 4 and "hola" > "python")
 print(3 > 4 or "hola" > "python")
 print(not(3 > 4))
 print(3 > 4 or "hola" > "python" or 4 == 4)
-
 print("" or "python") # "Python"  (porque "" es "falso")
 print("hola" and 1) # 1 porque es el que hace cumplir la condición 
+
+print("mundo" in "Hola mundo") #El operador in devuelve True si el primer string está contenido en el segundo. No solo funciona con strings, también con listas y otros tipos de datos.
 
 print(str(bool(1)))
 

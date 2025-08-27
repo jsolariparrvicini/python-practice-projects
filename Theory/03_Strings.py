@@ -67,3 +67,13 @@ print("python python".replace("thon","py",1)) #Reemplaza "thon" por "py" (pypy p
 print("   python   ".strip()) #Elimina los espacios en blanco al inicio y al final
 print("   python   ".lstrip()) #Elimina los espacios en blanco al inicio
 print("   python   ".rstrip()) #Elimina los espacios en blanco al final
+
+##Conversiones entre strings y listas##
+string_to_list = "Hola como te va".split()
+print(string_to_list) #Convierte la cadena en una lista, usando el espacio como separador
+string_to_list2 = "Hola,como,te,va".split(",")
+print(string_to_list2) #Convierte la cadena en una lista, usando la coma como separador
+
+list_to_string = " ".join(["Hola","como","te","va"]) #Convierte una lista en una cadena, usando el espacio como separador
+print(list_to_string)
+
