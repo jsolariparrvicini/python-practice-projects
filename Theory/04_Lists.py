@@ -68,5 +68,5 @@ my_new_list.sort(reverse=True) #Ordeno la lista de mayor a menor
 print(my_new_list)
 #Ojo, no puedo ordenar listas que mezclen tipos de datos
 
-print(my_new_list[False])
+
 
