@@ -77,3 +77,4 @@ print(string_to_list2) #Convierte la cadena en una lista, usando la coma como se
 list_to_string = " ".join(["Hola","como","te","va"]) #Convierte una lista en una cadena, usando el espacio como separador
 print(list_to_string)
 
+
