@@ -10,9 +10,9 @@ inventario_tienda = [
 #Analisis de productos
 print("--- ANĹISIS DEL PRODUCTO 'LECHE' ---")
 producto_3, precio_3, cantidad_3 = inventario_tienda[2].split(":")
-precio = float(precio_3)
-cantidad = int(cantidad_3)
-valor_total_stock_3 = precio*cantidad
+precio_3 = float(precio_3)
+cantidad_3 = int(cantidad_3)
+valor_total_stock_3 = precio_3*cantidad_3
 print(f"Nombe: {producto_3}"), print(f"Precio: {precio_3}"), print(f"Cantidad: {cantidad_3}")
 print(f"Valor del stock: ${valor_total_stock_3:.2f}")
 
