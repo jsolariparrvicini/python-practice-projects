@@ -19,6 +19,7 @@ print(len(my_dict)) #4. Número de pares clave-valor en el diccionario
 
 # Acceder a los valores mediante sus claves
 print(my_dict["Nombre"]) #John
+print(my_dict.get("Apellidos", "No está esta key")) # Doe. Si la clave no existe, devuelve el valor por defecto que le pasamos como segundo argumento
 print(my_dict[1]) #Python. Respeta el tipo de dato de la clave
 
 # Modificar valores
@@ -65,3 +66,11 @@ print(my_dict)
 print(list(my_dict)) #['Nombre', 'Apellido', 'Edad', 'Pais', 'Altura', 'Peso'] Devuelve una lista con las claves del diccionario
 
 
+"""
+ Casos de uso comunes de los diccionarios:
+    1. Almacenamiento de datos estructurados: Los diccionarios son ideales para almacenar datos que tienen una estructura clara, como registros de usuarios, configuraciones de aplicaciones, etc.
+    2. Contadores y frecuencias: Puedes usar diccionarios para contar la frecuencia de elementos en una lista o cadena.
+    3. Mapeo de claves a valores: Los diccionarios son útiles para mapear claves únicas a valores específicos, como en tablas de búsqueda.
+    4. Almacenamiento de configuraciones: Los diccionarios son una forma común de almacenar configuraciones y opciones en aplicaciones.
+    5. Representación de objetos JSON: Los diccionarios en Python son similares a los objetos JSON, lo que facilita la manipulación de datos JSON.
+"""
