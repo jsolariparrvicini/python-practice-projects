@@ -20,7 +20,7 @@ print(len(my_dict)) #4. Número de pares clave-valor en el diccionario
 # Acceder a los valores mediante sus claves
 print(my_dict["Nombre"]) #John
 print(my_dict.get("Apellidos", "No está esta key")) # Doe. Si la clave no existe, devuelve el valor por defecto que le pasamos como segundo argumento
-print(my_dict[1]) #Python. Respeta el tipo de dato de la clave
+print(my_dict[1]) #Python. Respetar el tipo de dato de la clave
 
 # Modificar valores
 my_dict["Nombre"] = "Mary" #Modifico el valor asociado a la clave "Nombre"
