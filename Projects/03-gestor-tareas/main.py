@@ -19,7 +19,7 @@ print(mensajes[ya_existe]) #Uso el valor de verdad como índice
 #Marcar una tarea completada
 tarea_completada = input("\nIngrese el nombre exacto de la tarea completada: ")
 index_tarea_completada = tareas.index(tarea_completada)
-tareas[index_tarea_completada] = f"[x] {tarea_completada}" #Los f strings no solo vn con el print
+tareas[index_tarea_completada] = f"[x] {tarea_completada}" #Los f strings no solo van con el print
 print(tareas)
 
 #Eliminar una tarea

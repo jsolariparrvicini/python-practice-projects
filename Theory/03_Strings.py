@@ -78,3 +78,6 @@ list_to_string = " ".join(["Hola","como","te","va"]) #Convierte una lista en una
 print(list_to_string)
 
 
+
+
+

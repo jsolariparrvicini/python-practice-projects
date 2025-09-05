@@ -52,3 +52,10 @@ if my_string.startswith("H") and my_string.endswith("o"):
     print("La cadena empieza con H y termina con o")
 else:
     print("La cadena no cumple ambas condiciones")
+
+#Operador ternario (condición en una sola línea)
+my_value = 10
+print("Es mayor a 10") if my_value > 10 else print("No es mayor a 10")
+# Tambien se puede usar para asignar valores a variables
+my_other_value = "Es mayor a 10" if my_value > 10 else "No es mayor a 10"
+print(my_other_value)
