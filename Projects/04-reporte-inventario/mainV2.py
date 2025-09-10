@@ -25,19 +25,17 @@ mas_caro = (precio_1 >= precio_2 and producto_1) or  producto_2 #Uso los operado
 precio_mayor =(precio_1 >= precio_2 and precio_1) or precio_2
 print(f"\nEl producto más caro entre {producto_1} y {producto_2} es: {mas_caro}, con un precio de ${precio_mayor}")
 
-#Reporte general de inventario
-producto_4, precio_4, cantida_4 = inventario_tienda[3].split(":")  
-producto_5, precio_5, cantida_5 = inventario_tienda[4].split(":")
-valor_total_stock = (float(precio_1)*int(cantida_1) + float(precio_2)*int(cantida_2) + float(precio_3)*int(cantidad_3) + float(precio_4)*int(cantida_4) + float(precio_5)*int(cantida_5)) 
-cantidad_total_productos = int(cantida_1) + int(cantida_2) + int(cantidad_3) + int(cantida_4) + int(cantida_5)           
-print(f"\n--- REPORTE DE INVENTARIO ---")
-print(f"Productos en inventario: {', '.join([producto_1, producto_2, producto_3, producto_4, producto_5])}")
-print(f"Valor total del inventario: ${valor_total_stock:.2f}")
-print(f"Cantidad total de productos en stock: {cantidad_total_productos} unidades")
+#Reporte general de inventario con BUCLES
+nombre_productos = []
+valor_total_inventario = 0
+cantidad_total_inventario = 0
+for producto in inventario_tienda:
+    nombre, precio, stock = producto.split(":")
+    valor_total_inventario += float(precio)*int(stock)
+    cantidad_total_inventario += int(stock)
+    nombre_productos.append(nombre)
 
-"""
-Lecciones aprendidas:
-- Uso de and como un if y or como un else para asignar valores a variables
-- Uso de f strings para formatear strings
-- Uso de join para unir elementos de una lista en un string separado por comas
-"""
+print(f"\n--- REPORTE DE INVENTARIO ---")
+print(f"Productos en inventario: {', '.join(nombre_productos)}")
+print(f"Valor total del inventario: ${valor_total_inventario:.2f}")
+print(f"Cantidad total de productos en stock: {cantidad_total_inventario} unidades")
