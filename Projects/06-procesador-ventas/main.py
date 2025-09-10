@@ -25,7 +25,7 @@ segunda_venta = tuple(segunda_venta) # Convertimos la lista a tupla
 tercera_venta = ventas_raw[2].split(",")
 tercera_venta[-1] = float(tercera_venta[-1]) # Convertimos el monto a float
 tercera_venta = tuple(tercera_venta) # Convertimos la lista a tupla
-
+ 
 ventas = [primera_venta, segunda_venta, tercera_venta]
 
 print(f"Ventas procesadas (primeras 3): {ventas}")
