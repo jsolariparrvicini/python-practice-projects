@@ -86,6 +86,10 @@ for i in range(1, 4):  #Bucle externo
 # Se pueden usar bucles anidados para iterar sobre estructuras de datos complejas, como listas de listas o diccionarios anidados.
 # Sin embargo, hay que tener cuidado con el rendimiento, ya que los bucles anidados pueden aumentar exponencialmente el tiempo de ejecución.
 
+#for con enumerate: itera sobre una secuencia y devuelve un par índice-valor en cada iteración, para ahorrar código.
+print("\nUsando for con enumerate")
+for index, element in enumerate(my_list):
+    print(f"Índice: {index}, Elemento: {element}")
 """Usos comunes de los loops:
 - Iterar sobre listas, tuplas, sets, diccionarios y cadenas de texto.
 - Repetir una acción un número específico de veces.
@@ -93,3 +97,4 @@ for i in range(1, 4):  #Bucle externo
 - Implementar algoritmos que requieren repetición, como búsquedas y ordenamientos.
 - Automatizar tareas repetitivas, como procesamiento de archivos o generación de informes.
 """
+
