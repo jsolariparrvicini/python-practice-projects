@@ -90,6 +90,14 @@ for i in range(1, 4):  #Bucle externo
 print("\nUsando for con enumerate")
 for index, element in enumerate(my_list):
     print(f"Índice: {index}, Elemento: {element}")
+
+#Listas por comprensión (list comprehensions): una forma concisa de crear listas usando bucles for y condiciones en una sola línea.
+print("\nUsando listas por comprensión")
+squared_numbers = [x**2 for x in range(10)]  #Crea una lista de los cuadrados de los números del 0 al 9
+print(squared_numbers)
+even_numbers = [x for x in range(10) if x % 2 == 0]  #Crea una lista de números pares del 0 al 9
+print(even_numbers)
+#Las listas por comprensión son más eficientes y legibles que los bucles for tradicionales para crear
 """Usos comunes de los loops:
 - Iterar sobre listas, tuplas, sets, diccionarios y cadenas de texto.
 - Repetir una acción un número específico de veces.

@@ -8,9 +8,9 @@ YELLOW = '\033[93m'
 GREY = '\033[90m'
 RESET = '\033[0m' 
 
-# Lista de palabras de 5 letras
-palabras = ["JUEGO","LISTA","AUDIO","IDEAS","COSAS","MANOS","LETRA","LIBRO","NUNCA","PLUMA","LLAVE","MENTE","LUCES",
-            "GATOS","PERRO","QUESO","BRAVO","FLOTA","GRITO","HUEVO"]
+with open("palabras.txt", "r") as file:
+    palabras = [linea.strip() for linea in file.readlines()]
+    
 cantidad_intentos = 6
 palabra_adivinar = random.choice(palabras)
 
