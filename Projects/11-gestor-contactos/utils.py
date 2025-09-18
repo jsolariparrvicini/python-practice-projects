@@ -91,7 +91,7 @@ def actualizar_contacto(contactos):
             contactos_encontrados.append(contacto)
 
     if len(contactos_encontrados) == 1: #Si solo hay un contacto que coincide, procedo a actualizarlo
-        contacto_actualiar = contactos_encontrados[0]
+        contacto_actualizar = contactos_encontrados[0]
         print("Contacto encontrado: ")
         mostrar_contactos(contactos_encontrados)
         mostrar_menu(2)
@@ -108,27 +108,27 @@ def actualizar_contacto(contactos):
         match opcion_submenu:
             case 1: 
                 nuevo_nombre = input("Ingrese el nuevo nombre: ")
-                contacto_actualiar['nombre'] = nuevo_nombre
+                contacto_actualizar['nombre'] = nuevo_nombre
                 print("Nombre actualizado exitosamente.")
             case 2:
                 nuevo_apellido = input("Ingrese el nuevo apellido: ")
-                contacto_actualiar['apellido'] = nuevo_apellido
+                contacto_actualizar['apellido'] = nuevo_apellido
                 print("Apellido actualizado exitosamente.")
             case 3:
                 nuevo_telefono = input("Ingrese el nuevo teléfono: ")
                 for contacto in contactos:  
-                    if nuevo_telefono == contacto["telefono"] and contacto != contacto_actualiar: #Verifico que no exista otro contacto con el mismo teléfono
+                    if nuevo_telefono == contacto["telefono"] and contacto != contacto_actualizar: #Verifico que no exista otro contacto con el mismo teléfono
                         print("Ya existe un contacto con ese número de teléfono.")
                         return
-                contacto_actualiar['telefono'] = nuevo_telefono
+                contacto_actualizar['telefono'] = nuevo_telefono
                 print("Teléfono actualizado exitosamente.")
             case 4:
                 nuevo_email = input("Ingrese el nuevo email: ")
                 for contacto in contactos:  
-                    if nuevo_email.lower() == contacto["email"].lower() and contacto != contacto_actualiar: #Verifico que no exista otro contacto con el mismo email
+                    if nuevo_email.lower() == contacto["email"].lower() and contacto != contacto_actualizar: #Verifico que no exista otro contacto con el mismo email
                         print("Ya existe un contacto con ese email.")
                         return
-                contacto_actualiar['email'] = nuevo_email
+                contacto_actualizar['email'] = nuevo_email
                 print("Email actualizado exitosamente.")
             case 5: 
                 print("Operación cancelada.")
@@ -145,7 +145,7 @@ def actualizar_contacto(contactos):
 
 def eliminar_contacto(contactos):
     print("--- Eliminar Contacto ---")
-    termino_busqueda = input("Ingrese el nombre o apellido a eliminr: ")
+    termino_busqueda = input("Ingrese el nombre o apellido a eliminar: ")
     print(f"\nResultado de la busqueda para '{termino_busqueda}'")
 
     contactos_encontrados = []
@@ -155,7 +155,7 @@ def eliminar_contacto(contactos):
             contactos_encontrados.append(contacto)
 
     if len(contactos_encontrados) == 1: 
-        contacto_eliminar= contactos_encontrados[0]
+        contacto_eliminar = contactos_encontrados[0]
         print("Contacto encontrado: ")
         mostrar_contactos(contactos_encontrados)
         confirmacion = input("¿Está seguro que desea eliminar este contacto? (s/n): ")
