@@ -46,7 +46,7 @@ def mostrar_contactos(contactos):
     print("----------------")
 
 def buscar_contacto(contactos):
-    print("--- Buscar Contacto ---")
+    print("\n--- Buscar Contacto ---")
     termino_busqueda = input("Ingrese el nombre o apellido a buscar: ")
     print(f"\nResultados de la busqueda para '{termino_busqueda}'")
     contactos_encontrados = []
@@ -61,7 +61,7 @@ def buscar_contacto(contactos):
         print(f"\nNo se encontraron contactos que coincidan con '{termino_busqueda}'")
 
 def agregar_contacto(contactos):
-    print("--- Agregar Nuevo Contacto ---")
+    print("\n--- Agregar Nuevo Contacto ---")
     nombre = input("Nombre: ")
     apellido = input("Apellido: ")
     telefono = input("Teléfono: ")
