@@ -71,3 +71,14 @@ class GestorContactos:
                     return 
         setattr(contacto,campo,nuevo_valor)
         print(f"{campo.capitalize()} actualizado exitosamente.")
+
+    def seleccionar_contacto(self, termino):
+        resultados = self.buscar_contacto(termino)
+        if not resultados:
+            print("No se encontraron contactos.")
+            return None
+        if len(resultados) > 1:
+            print("Demasiados contactos. Sea más específico.")
+            self.mostrar_contactos(resultados)
+            return None
+        return resultados[0]

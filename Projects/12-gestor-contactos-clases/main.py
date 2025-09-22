@@ -63,10 +63,9 @@ def main():
                 termino_busqueda = input("Ingrese el nombre o apellido a actualizar: ")
                 print(f"\nResultado de la busqueda para '{termino_busqueda}'")
 
-                contactos_encontrados = gestor_contactos.buscar_contacto(termino_busqueda)
-                if len(contactos_encontrados) == 1: 
-                    contacto_a_actualizar = contactos_encontrados[0]
-                    print(f"Contacto encontrado: {contacto_a_actualizar}")
+                contacto_encontrado = gestor_contactos.seleccionar_contacto(termino_busqueda)
+                if contacto_encontrado: 
+                    print(f"Contacto encontrado: {contacto_encontrado}")
                     mostrar_menu(2)
                     while True:
                         try:
@@ -94,36 +93,21 @@ def main():
                         case 5:
                             print("Operación cancelada.")
                             continue
-                    gestor_contactos.actualizar_contacto(contacto_a_actualizar,campo,nuevo_valor)
-                elif len(contactos_encontrados) > 1:
-                    print("Demasiados contactos encontrados. Por favor, sea más específico.")
-                    gestor_contactos.mostrar_contactos(contactos_encontrados)   
-                    continue
-                else:       
-                    print(f"No se encontraron contactos que coincidan con '{termino_busqueda}'")
-                    continue
+                    gestor_contactos.actualizar_contacto(contacto_encontrado,campo,nuevo_valor)
             case 5:
                 print("\n--- Eliminar Contacto ---")
                 termino_busqueda = input("Ingrese el nombre o apellido a eliminar: ")
                 print(f"\nResultado de la busqueda para '{termino_busqueda}'")
                 
-                contactos_encontrados = gestor_contactos.buscar_contacto(termino_busqueda)
-                if len(contactos_encontrados) == 1: 
-                    contacto_a_eliminar = contactos_encontrados[0]
-                    print(f"Contacto encontrado: {contacto_a_eliminar}")
+                contacto_encontrado = gestor_contactos.seleccionar_contacto(termino_busqueda)
+                if contactos_encontrados: 
+                    print(f"Contacto encontrado: {contacto_encontrado}")
                     confirmacion = input("¿Está seguro que desea eliminar este contacto? (s/n): ")
                     if confirmacion.lower() == 's':
-                        gestor_contactos.eliminar_contacto(contacto_a_eliminar)
+                        gestor_contactos.eliminar_contacto(contacto_encontrado)
                     else:
                         print("Operación cancelada.")
                         continue
-                elif len(contactos_encontrados) > 1:
-                    print("Demasiados contactos encontrados. Por favor, sea más específico.")
-                    gestor_contactos.mostrar_contactos(contactos_encontrados)   
-                    continue
-                else:       
-                    print(f"No se encontraron contactos que coincidan con '{termino_busqueda}'")
-                    continue
             case 6:
                 print("Saliendo del gestor de contactos. ¡Hasta luego!")
                 gestor_contactos.guardar_contactos() #Guarda los contactos en el archivo JSON antes de salir
