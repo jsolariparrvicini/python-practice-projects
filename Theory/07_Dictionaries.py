@@ -34,7 +34,7 @@ print(my_dict)
 del my_dict[1] #Elimino el par clave-valor con la clave 1
 print(my_dict)
 
-my_pop_element = my_dict.pop("Ciudad") #Elimino el par clave-valor con la clave "Apellido"
+my_pop_element = my_dict.pop("Ciudad") #Elimino el par clave-valor con la clave "Ciudad" y guardo su valor en una variable
 print(my_dict), print(my_pop_element) #New York
 
 # Comprobar si una clave existe en el diccionario

@@ -1,0 +1,14 @@
+{
+    "nitter_host": "https://rsshub.pseudoyu.com/twitter",
+    "tiempo_espera": 300,
+    "users": {
+        "HernanSCastillo": [],
+        "GermanBalcarce": [],
+        "GerGarciaGrova": ["River"],
+        "CLMerlo": ["River"],
+        "Sebasrur": [],
+        "RodryRosetti": ["River"],
+        "DamianAvillagra": ["River"],
+        "maxigrillo": ["River"]
+    }
+}

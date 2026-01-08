@@ -79,3 +79,11 @@ print(td) #Sirve para representar una duración específica que se puede sumar o
 # Sumar un timedelta a un datetime
 new_dt = now + td #Suma un objeto timedelta a un objeto datetime para obtener una nueva fecha y hora
 print(new_dt) #Sirve para calcular fechas futuras o pasadas basadas en una duración específica
+
+print(timedelta()) #Representa una duración de cero, útil para comparaciones o inicializaciones. por ejemplo, para verificar si una duración es positiva, negativa o nula. Por ejemplo:
+if delta > timedelta():
+    print("dt2 es posterior a dt1")
+if delta < timedelta():
+    print("dt2 es anterior a dt1")
+if delta == timedelta():
+    print("dt2 es igual a dt1")

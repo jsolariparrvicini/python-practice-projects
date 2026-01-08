@@ -24,7 +24,7 @@ print("\nSimulando do-while")
 while True:
     print(f"Esto se ejecuta al menos una vez: {my_condition}")
     if my_condition >= 20: # Condición de salida del bucle
-        print("Saliendo del bucle simulado do-while")
+        print("Saliendo del bucle simulando do-while")
         break
     my_condition += 2  
 
